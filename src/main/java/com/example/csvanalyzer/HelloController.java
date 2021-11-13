@@ -13,12 +13,6 @@ import java.net.URI;
 
 
 public class HelloController  {
-    @FXML
-    private Label welcomeText;
-    @FXML
-    private Button selectInputFile;
-
-
 
     @FXML
     private VBox mainWindow;
@@ -32,8 +26,6 @@ public class HelloController  {
     @FXML
     private Label outputDir;
 
-    @FXML
-    private Button startButton;
 
     @FXML
     private TextArea main_titles;
@@ -47,11 +39,7 @@ public class HelloController  {
     CSVAnalysis csvAnalysis;
 
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
 
-    }
     @FXML
     protected void findInputFile(){
 

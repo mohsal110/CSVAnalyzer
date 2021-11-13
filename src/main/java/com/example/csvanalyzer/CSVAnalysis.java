@@ -1,13 +1,8 @@
 package com.example.csvanalyzer;
-//import org.apache.commons.csv.CSVFormat;
-//import org.apache.commons.csv.CSVPrinter;
-//import org.apache.commons.csv.CSVRecord;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.event.EventType;
+
 import javafx.scene.control.*;
 import org.apache.commons.csv.CSVFormat;
-import org.apache.commons.csv.CSVParser;
+
 import org.apache.commons.csv.CSVPrinter;
 import org.apache.commons.csv.CSVRecord;
 
@@ -18,10 +13,9 @@ import java.net.URI;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.*;
 
-import java.util.Arrays;
+
 
 public class CSVAnalysis {
-//    final CSVPrinter printer = CSVFormat.RFC4180.withHeader ( "ID" , "name1" , "name3" ).print ( pathOutput , StandardCharsets.UTF_8 ) ;
 
     URI inputPatStr;
     URI outputPatStr;
@@ -76,7 +70,6 @@ public void createCSVFile(){
 
             try (
                     final BufferedReader reader = Files.newBufferedReader ( pathInput , StandardCharsets.UTF_8 );
-//                    final CSVPrinter printer = CSVFormat.RFC4180.withHeader ( "ID" , "name1" , "name3" ).print ( pathOutput , StandardCharsets.UTF_8 );
 
                     final CSVPrinter printer = CSVFormat.RFC4180.withHeader ( transfer_headers[0],transfer_headers[1],transfer_headers[2]).print ( file , StandardCharsets.UTF_8 );
 
